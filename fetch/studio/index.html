@@ -4,6 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Astronauts</title>
+    <script> 
+     window.addEventListener("load", function() {
+        fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function(response) {
+      //  const jsonPlanets = response.json.then(function(json);
+      //  console.log(jsonPlanets);    
+       response.json().then(function(json) {
+        //  console.log(json)
+         planetRando = json[Math.floor((Math.random() * 6))]
+                  const div = document.getElementById("container");
+                  div.innerHTML = `
+                     <h2>Mission Destination</h2>
+                        <ol>
+                            <li>Name: ${planetRando.firstName}</li>
+                            <li>last name: ${planetRando.lastName}</li>
+                            <li>Skills: ${planetRando.skills}</li>
+                            <li>hours in space: ${planetRando.hoursInSpace}</li>
+                            <li>id: ${planetRando.id}</li>
+                        </ol>
+                        <img src="${planetRando.picture}">
+                  `;
+               });
+       });
+        });
+    </script>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
