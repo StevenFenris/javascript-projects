@@ -9,7 +9,7 @@ console.log(language[language.indexOf('J')] + language[language.indexOf('S')]);
 //3. Use bracket notation and a template literal to print, "The abbreviation for 'JavaScript' is 'JS'."
 console.log(`The abbreviation for Javascript is ${language[0] + language[language.indexOf('S')]}`);
 //4. Just for fun, try chaining 3 or more methods together, and then print the result.
-console.log(language.toLowerCase().replace('S', '5').
+console.log(language.toLowerCase().replace('S', '5'))
 //Part Three section Two
 
 //1. Use the string methods you know to print 'Title Case' from the string 'title case'.
