@@ -18,15 +18,15 @@ for (let i = 0; i<prompts.length; i++){
   let response = input.question(`Would you like to ${prompts[i]}? Y/N: `);
   if (response.toLowerCase()==='y'){
     if (i===0){
-      printAll(astronauts[i], testTitles[i], scores[i]//Call 'printAll' here and pass in all necessary arguments.
+      printAll(astronauts[i], testTitles[i], scores[i])//Call 'printAll' here and pass in all necessary arguments.
     } else if (i===1){
       for (let j = 0; j<testTitles.length; j++){
-        let avg = averageForTest(scores[i], j);//Call 'averageForTest' here. Pass in j and scores as arguments.
+        let avg = averages.averageForTest(scores[i], j);//Call 'averageForTest' here. Pass in j and scores as arguments.
         console.log(`${testTitles[j]} test average = ${avg}%.`);
       }
     } else if (i===2){
       for (let j = 0; j<astronauts.length; j++){
-        let avg = averageForStudent(j, scores[i])//Call 'averageForStudent' here. Pass in j and scores as arguments.
+        let avg = averages.averageForStudent(j, scores[i])//Call 'averageForStudent' here. Pass in j and scores as arguments.
         console.log(`${astronauts[j]}'s test average = ${avg}%.`);
       }
     } else {
