@@ -21,7 +21,7 @@ for (let i = 0; i<prompts.length; i++){
       printAll(astronauts[i], testTitles[i], scores[i])//Call 'printAll' here and pass in all necessary arguments.
     } else if (i===1){
       for (let j = 0; j<testTitles.length; j++){
-        let avg = averages.averageForTest(scores[i], j);//Call 'averageForTest' here. Pass in j and scores as arguments.
+        let avg = averages.averageForTest( j, scores[i]);//Call 'averageForTest' here. Pass in j and scores as arguments.
         console.log(`${testTitles[j]} test average = ${avg}%.`);
       }
     } else if (i===2){
@@ -30,7 +30,7 @@ for (let i = 0; i<prompts.length; i++){
         console.log(`${astronauts[j]}'s test average = ${avg}%.`);
       }
     } else {
-      let walker = randomSelect(); //Call 'randomSelect' to pick a spacewalker from the astronauts array.
+      let walker = randomSelect(astronauts); //Call 'randomSelect' to pick a spacewalker from the astronauts array.
       console.log(`${walker} is the next spacewalker.`);
     }
   } else {
